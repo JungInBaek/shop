@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shop.entity.CartTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-16T07:13:45" hostname="JUNGINBAEK" time="0.326">
+  <properties/>
+  <testcase name="장바구니 회원 엔티티 매핑 조회 테스트" classname="com.shop.entity.CartTest" time="0.326"/>
+  <system-out><![CDATA[16:13:39.031 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:13:39.050 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:13:39.086 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.shop.entity.CartTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:13:39.098 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.shop.entity.CartTest], using SpringBootContextLoader
+16:13:39.102 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.shop.entity.CartTest]: class path resource [com/shop/entity/CartTest-context.xml] does not exist
+16:13:39.102 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.shop.entity.CartTest]: class path resource [com/shop/entity/CartTestContext.groovy] does not exist
+16:13:39.102 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.shop.entity.CartTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:13:39.103 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.shop.entity.CartTest]: CartTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:13:39.148 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.shop.entity.CartTest]
+16:13:39.216 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\bji15\IdeaProjects\shop\build\classes\java\main\com\shop\ShopApplication.class]
+16:13:39.217 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.shop.ShopApplication for test class com.shop.entity.CartTest
+16:13:39.334 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.shop.entity.CartTest]: using defaults.
+16:13:39.334 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener]
+16:13:39.355 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1cefc4b3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b27cc70, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6f6a7463, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1bdaa23d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@79f227a9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6ca320ab, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50d68830, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1e53135d, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@7674a051, org.springframework.test.context.event.EventPublishingTestExecutionListener@3a7704c, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@6754ef00, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@619bd14c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@323e8306, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@a23a01d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4acf72b6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7561db12, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3301500b]
+16:13:39.360 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4b770e40 testClass = CartTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78e16155 testClass = CartTest, locations = '{}', classes = '{class com.shop.ShopApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{classpath:application-test.properties}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@2bb7bd00, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@27305e6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7446d8d5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@75f5fd58, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6b9ce1bf, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3336e6b6], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+16:13:39.403 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.5)
+
+2021-10-16 16:13:39.723  INFO 14856 --- [    Test worker] com.shop.entity.CartTest                 : Starting CartTest using Java 11.0.12 on JungInBaek with PID 14856 (started by bji15 in C:\Users\bji15\IdeaProjects\shop)
+2021-10-16 16:13:39.725  INFO 14856 --- [    Test worker] com.shop.entity.CartTest                 : The following profiles are active: datasource
+2021-10-16 16:13:40.924  INFO 14856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-16 16:13:41.012  INFO 14856 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2021-10-16 16:13:41.647  INFO 14856 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-16 16:13:41.723  INFO 14856 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-16 16:13:41.904  INFO 14856 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-16 16:13:42.048  INFO 14856 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-16 16:13:42.251  INFO 14856 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-16 16:13:42.272  INFO 14856 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: 
+    
+    drop table if exists cart CASCADE 
+Hibernate: 
+    
+    drop table if exists item CASCADE 
+Hibernate: 
+    
+    drop table if exists member CASCADE 
+Hibernate: 
+    
+    drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: 
+    
+    create table cart (
+       cart_id bigint not null,
+        member_id bigint,
+        primary key (cart_id)
+    )
+Hibernate: 
+    
+    create table item (
+       item_id bigint not null,
+        item_detail clob not null,
+        item_name varchar(50) not null,
+        item_sell_status varchar(255),
+        price integer not null,
+        reg_time timestamp,
+        stock_number integer not null,
+        update_time timestamp,
+        primary key (item_id)
+    )
+Hibernate: 
+    
+    create table member (
+       member_id bigint not null,
+        address varchar(255),
+        email varchar(255),
+        name varchar(255),
+        password varchar(255),
+        role varchar(255),
+        primary key (member_id)
+    )
+Hibernate: 
+    
+    alter table member 
+       add constraint UK_mbmcqelty0fbrvxp1q58dn57t unique (email)
+Hibernate: 
+    
+    alter table cart 
+       add constraint FKix170nytunweovf2v9137mx2o 
+       foreign key (member_id) 
+       references member
+2021-10-16 16:13:43.128  INFO 14856 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-16 16:13:43.138  INFO 14856 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-16 16:13:43.220  WARN 14856 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-16 16:13:43.938  INFO 14856 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test'
+2021-10-16 16:13:44.242  INFO 14856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/css/**'] with []
+2021-10-16 16:13:44.242  INFO 14856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/js/**'] with []
+2021-10-16 16:13:44.242  INFO 14856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/img/**'] with []
+2021-10-16 16:13:44.375  INFO 14856 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ef7e4c7, org.springframework.security.web.context.SecurityContextPersistenceFilter@16a14076, org.springframework.security.web.header.HeaderWriterFilter@1f4b8027, org.springframework.security.web.csrf.CsrfFilter@6e757f39, org.springframework.security.web.authentication.logout.LogoutFilter@2c8c42c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@70ca8e72, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2786b644, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@620e0d36, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57edfa89, org.springframework.security.web.session.SessionManagementFilter@c5e7696, org.springframework.security.web.access.ExceptionTranslationFilter@4e8b36af, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34074149]
+2021-10-16 16:13:45.546  INFO 14856 --- [    Test worker] com.shop.entity.CartTest                 : Started CartTest in 6.134 seconds (JVM running for 7.645)
+2021-10-16 16:13:45.584  INFO 14856 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@4b770e40 testClass = CartTest, testInstance = com.shop.entity.CartTest@64b242b3, testMethod = findCartAndMemberTest@CartTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78e16155 testClass = CartTest, locations = '{}', classes = '{class com.shop.ShopApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{classpath:application-test.properties}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@2bb7bd00, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@27305e6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7446d8d5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@75f5fd58, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6b9ce1bf, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3336e6b6], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@3502b614]; rollback [true]
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        member
+        (address, email, name, password, role, member_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2021-10-16 16:13:45.836 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [서울시 마포구 합정동]
+2021-10-16 16:13:45.837 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [test@email.com]
+2021-10-16 16:13:45.837 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [홍길동]
+2021-10-16 16:13:45.837 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [$2a$10$y7dITW8cjo62e4hBPaFG/O2bdcivWVe54Gpj8d47yCu2rytxQUdee]
+2021-10-16 16:13:45.838 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [ADMIN]
+2021-10-16 16:13:45.838 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [1]
+Hibernate: 
+    insert 
+    into
+        cart
+        (member_id, cart_id) 
+    values
+        (?, ?)
+2021-10-16 16:13:45.843 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-10-16 16:13:45.843 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [2]
+Hibernate: 
+    select
+        cart0_.cart_id as cart_id1_0_0_,
+        cart0_.member_id as member_i2_0_0_,
+        member1_.member_id as member_i1_2_1_,
+        member1_.address as address2_2_1_,
+        member1_.email as email3_2_1_,
+        member1_.name as name4_2_1_,
+        member1_.password as password5_2_1_,
+        member1_.role as role6_2_1_ 
+    from
+        cart cart0_ 
+    left outer join
+        member member1_ 
+            on cart0_.member_id=member1_.member_id 
+    where
+        cart0_.cart_id=?
+2021-10-16 16:13:45.859 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [2]
+2021-10-16 16:13:45.863 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([member_i1_2_1_] : [BIGINT]) - [1]
+2021-10-16 16:13:45.866 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([member_i2_0_0_] : [BIGINT]) - [1]
+2021-10-16 16:13:45.867 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([address2_2_1_] : [VARCHAR]) - [서울시 마포구 합정동]
+2021-10-16 16:13:45.867 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([email3_2_1_] : [VARCHAR]) - [test@email.com]
+2021-10-16 16:13:45.867 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([name4_2_1_] : [VARCHAR]) - [홍길동]
+2021-10-16 16:13:45.867 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password5_2_1_] : [VARCHAR]) - [$2a$10$y7dITW8cjo62e4hBPaFG/O2bdcivWVe54Gpj8d47yCu2rytxQUdee]
+2021-10-16 16:13:45.868 TRACE 14856 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([role6_2_1_] : [VARCHAR]) - [ADMIN]
+2021-10-16 16:13:45.891  INFO 14856 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@4b770e40 testClass = CartTest, testInstance = com.shop.entity.CartTest@64b242b3, testMethod = findCartAndMemberTest@CartTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@78e16155 testClass = CartTest, locations = '{}', classes = '{class com.shop.ShopApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{classpath:application-test.properties}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@2bb7bd00, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@27305e6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7446d8d5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@75f5fd58, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6b9ce1bf, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@3336e6b6], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
