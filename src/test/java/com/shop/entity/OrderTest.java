@@ -81,7 +81,7 @@ public class OrderTest {
         Order order = new Order();
 
         for(int i = 0; i < 3; i++) {
-            Item item = new Item();
+            Item item = this.createItem();
             itemRepository.save(item);
             OrderItem orderItem = new OrderItem();
             orderItem.setItem(item);
@@ -119,5 +119,8 @@ public class OrderTest {
         OrderItem orderItem = orderItemRepository.findById(orderItemId)
                 .orElseThrow(EntityNotFoundException::new);
         System.out.println("Order class : " + orderItem.getOrder().getClass());
+        System.out.println("============================");
+        orderItem.getOrder().getOrderDate();
+        System.out.println("============================");
     }
 }
