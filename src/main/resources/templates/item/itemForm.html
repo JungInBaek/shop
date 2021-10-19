@@ -55,8 +55,11 @@
 
     <form role="form" method="post" enctype="multipart/form-data" th:object="${itemFormDto}">
 
-        <p class="h2">
+        <p th:if="${#strings.isEmpty(itemFormDto.id)}" class="h2">
             상품 등록
+        </p>
+        <p th:unless="${#strings.isEmpty(itemFormDto.id)}" class="h2">
+            상품 수정
         </p>
 
         <input type="hidden" th:field="*{id}">
